@@ -1,0 +1,104 @@
+body { background-color: #64cdac;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;}
+
+.container {
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 12px #444343;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.timer {
+    font-size: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgb(2, 86, 40);
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+from { transform: scale(1);
+}   
+
+to { transform: scale(1.05);
+}
+}
+.timer span {
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.controls {
+   
+    display: flex;
+    gap: 0.7rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #64cdac;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color:0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: #036244;
+    color: #fff;
+}
+
+.lap-title {
+    font-size: 1.5rem;
+}
+
+.laps {
+    width: 100%;
+}
+
+ul {list-style-type: none;
+padding:10px;
+margin: 0;
+overflow-y: auto;
+max-height: 200px;
+background-color: black;
+color: #fff;
+border-radius: 5px;
+}
+
+li{
+    padding: 1rem;
+    border-bottom: 1px solid #fff;
+}
+
+li:last-child{border-bottom: none;}
+
+li span{
+    font-weight: 700;
+}
