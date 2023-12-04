@@ -1,17 +1,17 @@
-body { background-color: #64cdac;
-    margin: 0;
+body{
+    background-color:#64cdac;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;}
+    min-height: 100vh;
+    font-family: sans-serif;
+}
 
-.container {
-    margin: auto;
+.container{
+    background-color: #eee9e9;
+    border-radius: 16px;
     padding: 20px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 12px #444343;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,85 +19,88 @@ body { background-color: #64cdac;
 
 .title{
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
 }
 
-.stopwatch {
+.stopwatch{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
-.timer {
+.timer{
     font-size: 40px;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgb(2, 86, 40);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     animation: pulse 1.5s infinite alternate;
 }
 
 @keyframes pulse {
-from { transform: scale(1);
-}   
+    from{
+        transform: scale(1);
+    }
+    
+    to{
+        transform: scale(1.05);
+    }
+}
 
-to { transform: scale(1.05);
-}
-}
-.timer span {
-    width: 100px;
+.timer span{
+    width: 110px;
     display: inline-block;
     text-align: center;
 }
 
-.controls {
-   
+.contorls{
     display: flex;
-    gap: 0.7rem;
+    gap: 1rem;
 }
 
-button {
+button{
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     background-color: #64cdac;
-    color: black;
-    font-weight: bolder;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color:0.3s ease-in-out;
+    transition:   background-color 0.3s ease-in-out;
 }
 
 button:hover{
-    background-color: #036244;
-    color: #fff;
+    background-color: #0c4b37;
 }
 
-.lap-title {
+.lap-title{
     font-size: 1.5rem;
 }
 
-.laps {
+.laps{
     width: 100%;
 }
 
-ul {list-style-type: none;
-padding:10px;
-margin: 0;
-overflow-y: auto;
-max-height: 200px;
-background-color: black;
-color: #fff;
-border-radius: 5px;
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 li{
     padding: 1rem;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-li:last-child{border-bottom: none;}
+li:last-child{
+    border-bottom: none;
+}
 
 li span{
     font-weight: 700;
