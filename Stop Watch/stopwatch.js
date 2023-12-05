@@ -51,7 +51,7 @@ function resetTimer(){
 
 function updateTimer(){
     milliseconds++;
-    if(milliseconds === 500){  //// 1000  -> 1 seconds = 1000 millseconds
+    if(milliseconds === 200){  //// 1000  -> 1 seconds = 1000 millseconds
         milliseconds = 0;
         seconds++;
         if(seconds === 60){
