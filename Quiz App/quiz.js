@@ -58,14 +58,14 @@ function loadQuiz() {
 }
 
 function deselectAnswers() {
-  answerEls.forEach((answerEls) => (answerEls.checked = false))
+  answerEls.forEach(answerEl => answerEl.checked = false)
 }
 
 function getSelected() {
-  let answerEls
-  answerEls.forEach((answerEls) => /*check for errors */ {
-    if (answerEls.checked) {
-      answer = answerEls.id
+  let answer
+  answerEls.forEach(answerEl =>{
+    if (answerEl.checked) {
+      answer = answerEl.id
     }
   })
   return answer
@@ -78,16 +78,17 @@ submitBtn.addEventListener("click", () => {
       score++
     }
     currentQuiz++
-    if ((current < quizData, length)) {
+
+    if(currentQuiz < quizData.length) {
       loadQuiz()
     } else {
-      quiz.innerHTML = `
+      quiz.innerHTML= `
         <h2>
-          You answer ${score}/ ${quizData.length} questions correctly
+          You answered ${score}/${quizData.length} questions correctly
         </h2>
 
         <button onclick='location.reload()'> Reload </button>
         `
     }
   }
-});
+})
