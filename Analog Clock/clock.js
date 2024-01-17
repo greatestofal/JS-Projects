@@ -1,19 +1,23 @@
 'use strict';
 
-const secDiv = document.getElementByID('sec');
-const minDiv = document.getElementByID('min');
-const hourDiv = document.getElementByID('hour');
+const hourHand = document.querySelector('[data-hour-hand]')
+const minuteHand = document.querySelector('[data-minute-hand]')
+const secondHand = document.querySelector('[data-second-hand]')
 
-setInterval (updateClock, 1000);
-function updateClock(){
-    let date = new Date();
-    let sec = date.getSeconds() / 60;
-    let min = (date.getMinutes() + sec) / 60;
-    let hour = (date.getHours() +min) / 12;
+setInterval(setClock, 1000)
+function setClock(){
+    const currentDate = new Date()
+    const secondsRatio = currentDate.getSeconds() / 60
+    const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
+    const hoursRatio = (minutesRatio + currentDate.getHours()) / 12
 
-    secDiv.style.transform = "rotate(" + (sec * 360) + "deg)";
-    minDiv.style.transform = "rotate(" + (sec * 360) + "deg)";
-    hourDiv.style.transform = "rotate(" + (sec * 360) + "deg)";
+    setRotation(secondHand, secondsRatio)
+    setRotation(minuteHand, minutesRatio)
+    setRotation(hourHand, hoursRatio)
 }
 
-updateClock;
+function setRotation(element, rotationRatio){
+element.style.setProperty('--rotation', rotationRatio * 360)
+}
+
+setClock()
