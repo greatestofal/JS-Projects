@@ -89,3 +89,8 @@
     content: 'Seconds';
     bottom: -10px;
 }
+
+#milli::after {
+    content: 'Milliseconds';
+    bottom: -10px;
+}
