@@ -90,7 +90,7 @@
     bottom: -10px;
 }
 
-#milli::after {
+/* #milli::after {
     content: 'Milliseconds';
     bottom: -10px;
-}
+} */
