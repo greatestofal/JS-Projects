@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+button {
+    background-color: red;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
